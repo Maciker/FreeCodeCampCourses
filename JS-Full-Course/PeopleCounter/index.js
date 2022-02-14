@@ -12,12 +12,13 @@ const peopleCounter = () => {
     showAmountOfPeople(amountOfPeople)
 }
 
-const saveAmountOfPeople = () => {
-    storedPeople += amountOfPeople + ' - '
-    peopleStoredHtmlElement.innerText = storedPeople
-}
-
 const resetPeopleCounter = () => {
     amountOfPeople = 0;
     showAmountOfPeople(amountOfPeople)
+}
+
+const saveAmountOfPeople = () => {
+    storedPeople += amountOfPeople + ' - '
+    peopleStoredHtmlElement.innerText = storedPeople
+    resetPeopleCounter() 
 }
